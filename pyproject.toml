@@ -29,7 +29,9 @@ classifiers = [
   "Typing :: Typed",
 ]
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+  "caproto[standard] >=0.4.2rc1,!=1.2.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/NSLS2/hiden"
@@ -85,21 +87,6 @@ report.exclude_also = [
   'if typing.TYPE_CHECKING:',
 ]
 
-[tool.mypy]
-files = ["src", "tests"]
-python_version = "3.9"
-warn_unused_configs = true
-strict = true
-enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
-warn_unreachable = true
-disallow_untyped_defs = false
-disallow_incomplete_defs = false
-
-[[tool.mypy.overrides]]
-module = "hiden.*"
-disallow_untyped_defs = true
-disallow_incomplete_defs = true
-
 
 [tool.ruff]
 
@@ -138,18 +125,3 @@ isort.required-imports = ["from __future__ import annotations"]
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["T20"]
 "noxfile.py" = ["T20"]
-
-
-[tool.pylint]
-py-version = "3.9"
-ignore-paths = [".*/_version.py"]
-reports.output-format = "colorized"
-similarities.ignore-imports = "yes"
-messages_control.disable = [
-  "design",
-  "fixme",
-  "line-too-long",
-  "missing-module-docstring",
-  "missing-function-docstring",
-  "wrong-import-position",
-]

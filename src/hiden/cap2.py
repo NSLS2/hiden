@@ -5,7 +5,7 @@ from pathlib import PureWindowsPath
 from caproto import ChannelType
 from caproto.server import PVGroup, pvproperty, ioc_arg_parser, run
 
-from massoft_client import MASsoftClient, EXPERIMENT_DIRECTORY, MOST_RECENT_FILE
+from .massoft_client import MASsoftClient, EXPERIMENT_DIRECTORY, MOST_RECENT_FILE
 
 logging.basicConfig(level=logging.INFO)
 
