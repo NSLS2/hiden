@@ -1,0 +1,13 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2025.05.02-13-g4bc2312
+_src_path: gh:scientific-python/cookie
+backend: hatch
+email: thopkins1@bnl.gov
+full_name: Thomas Hopkins
+license: BSD
+org: NSLS2
+project_name: hiden
+project_short_description: Development of new IOC for pulling and reading real time
+    data streaming from Hiden RGA
+url: https://github.com/NSLS2/hiden
+vcs: true
